@@ -23,6 +23,16 @@ data = np.loadtxt(filename,delimiter=",", skiprows = 32)
 # plt.plot(xdata,ydata, arguments-to-make-plot-pretty)
 
 
+# plotting stress vs strain
+plt.plot(filename[1],filename[3],"k-", linestyle='dashed')
+# plt.title("Stress vs Strain of" + insert thing here)
+plt.xlabel("Strain")
+plt.ylabel('Stress (MPa)')
+plt.grid(True)
+# plt.legend(loc="best")
+plt.show()
+
+
 ## Part 2
 # Check to see if your code in part 1 will plot all of the files in raw-data/
 # Edit the files (use git liberally here!) to make them more usable
