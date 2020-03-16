@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
-data = np.loadtxt(filename,delimiter=",", skiprows = 32)
+data = np.loadtxt(filename, delimiter=",", skiprows = 32)
 # Attempts to load filename into local variable data.
 
 ## Part 0
@@ -24,12 +24,13 @@ data = np.loadtxt(filename,delimiter=",", skiprows = 32)
 
 
 # plotting stress vs strain
-plt.plot(filename[1],filename[3],"k-", linestyle='dashed')
+plt.plot(data[7],data[3],"k-", linestyle='dashed')
 # plt.title("Stress vs Strain of" + insert thing here)
 plt.xlabel("Strain")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
-# plt.legend(loc="best")
+plt.title(filename)
+plt.legend(loc="best")
 plt.show()
 
 
