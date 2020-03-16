@@ -24,9 +24,12 @@ data = np.loadtxt(filename, delimiter=",", skiprows = 32)
 
 
 # plotting stress vs strain
-plt.plot(data[7],data[3],"k-", linestyle='dashed')
+range = (len(data))
+stress = data[:,3]
+strain = data[:,7]
+plt.plot(strain,stress,"k-", linestyle='dashed')
 # plt.title("Stress vs Strain of" + insert thing here)
-plt.xlabel("Strain")
+plt.xlabel("Strain [Ext %]")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
@@ -37,6 +40,7 @@ plt.show()
 ## Part 2
 # Check to see if your code in part 1 will plot all of the files in raw-data/
 # Edit the files (use git liberally here!) to make them more usable
+# ADD EXTRA FILES OR EXTRA ARRAYS TO MAKE IT WORK OKAY THANKS CARMEN
 
 
 ## Part 3
