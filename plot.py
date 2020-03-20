@@ -33,7 +33,7 @@ plt.xlabel("Strain [Ext %]")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
-plt.legend(loc="best")
+# plt.legend(loc="best")
 plt.show()
 
 
