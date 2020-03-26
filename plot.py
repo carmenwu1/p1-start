@@ -27,20 +27,22 @@ data = np.loadtxt(filename, delimiter=",", skiprows = 32)
 range = (len(data))
 stress = data[:,3]
 strain = data[:,7]
-plt.plot(strain,stress,"k-", linestyle='dashed')
+plt.plot(strain,stress,"k-", linestyle='solid',label="Stress vs Strain")
 # plt.title("Stress vs Strain of" + insert thing here)
 plt.xlabel("Strain [Ext %]")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
-# plt.legend(loc="best")
 
+# plotting and displaying the linear fit
 m1,b1=np.polyfit(strain,stress,1)
+reg=b1+m1*strain
 linearf=np.poly1d(m1,b1)
+plt.plot(strain,reg,"g--", linestyle='dashed',label="Linear fit")
 print(m1, end="")
 print(" MPa")
 
-
+plt.legend(loc="best")
 plt.show()
 
 
