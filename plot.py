@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-import numpy as np
 import sys
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
@@ -34,6 +32,10 @@ plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
 # plt.legend(loc="best")
+
+m1,b1=np.polyfit(strain,stress)
+linearf=np.poly1d(m1,b1)
+print (m1)
 plt.show()
 
 
