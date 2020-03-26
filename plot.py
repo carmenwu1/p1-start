@@ -1,4 +1,6 @@
 import sys
+import numpy as np
+import matplotlib.pyplot as plt
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename, delimiter=",", skiprows = 32)
@@ -33,9 +35,12 @@ plt.grid(True)
 plt.title(filename)
 # plt.legend(loc="best")
 
-m1,b1=np.polyfit(strain,stress)
+m1,b1=np.polyfit(strain,stress,1)
 linearf=np.poly1d(m1,b1)
-print (m1)
+print(m1, end="")
+print(" MPa")
+
+
 plt.show()
 
 
