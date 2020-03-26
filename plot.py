@@ -39,6 +39,11 @@ m1,b1=np.polyfit(strain,stress,1)
 reg=b1+m1*strain
 linearf=np.poly1d(m1,b1)
 plt.plot(strain,reg,"g--", linestyle='dashed',label="Linear fit")
+
+# printing the young's modulus
+print("The Young's Modulus of ",end="")
+print(filename,end="")
+print(" is ", end="")
 print(m1, end="")
 print(" MPa")
 
