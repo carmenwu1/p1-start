@@ -1,7 +1,6 @@
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename, delimiter=",", skiprows = 32)
@@ -25,14 +24,18 @@ data = np.loadtxt(filename, delimiter=",", skiprows = 32)
 
 
 # plotting stress vs strain
-range = (len(data))
-stress = data[:,3]
-strain = data[:,7]
+# range = (len(data))
+stressneg = data[:,3]
+strainneg = data[:,7]
+stress = stressneg*(-1)
+strain = strainneg*(-1)
 plt.plot(strain,stress,"k-", linestyle='solid',label="Stress vs Strain")
 plt.xlabel("Strain [Ext %]")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
+
+# making the axies in scientific notation since the numbers are ridiciously large
 plt.ticklabel_format(style='sci',axis='y',scilimits=(0,0))
 
 # plotting and displaying the linear fit
@@ -48,9 +51,12 @@ print(" is ", end="")
 print(m1, end="")
 print(" MPa")
 
+# showing the plot
 plt.legend(loc="best")
 plt.show()
 
+# saving the data
+plt.savefig(filename+'.pdf')
 
 ## Part 2
 # Check to see if your code in part 1 will plot all of the files in raw-data/
