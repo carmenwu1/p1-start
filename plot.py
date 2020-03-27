@@ -55,9 +55,6 @@ print(" MPa")
 plt.legend(loc="best")
 plt.show()
 
-# saving the data
-plt.savefig(filename+'.pdf')
-
 ## Part 2
 # Check to see if your code in part 1 will plot all of the files in raw-data/
 # Edit the files (use git liberally here!) to make them more usable
@@ -77,5 +74,5 @@ plt.savefig(filename+'.pdf')
 # directory. If you haven't already, this is a good time to add text to 
 # your .gitignore file so you're not committing the figures to your repository.
 
-
-
+# saving plots to a file
+plt.savefig(filename+".pdf")
