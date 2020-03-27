@@ -6,10 +6,11 @@ Software:
 - Cisco Anyconnect
 - MobaXterm (https://mobaxterm.mobatek.net/)
 
-This code can be run in python by running, the code (plot.py), and then the file name. It can be edited for files that have slightly differing data sets.
+This code can be run by running python, the code (plot.py), and then the file name. It can be edited for files that have slightly differing data sets or structures by changing the location where the code first reads the data, as well as which lines are stress and strain..
 eg) $ python plot.py [filename]
+eg) data[4] instead of data[3]
 
 When this code is run in the terminal, it will show the Young's modulus of a sample in the terminal and will pop up a graph that has the data plotted in a solid line as well as a linear fit in a dashed line. The axes of the graph are in scientific notation to help read the numbers.
 
 Commentary:
-So through this project, I learned that git is awesome. I had this one moment where my modified data was all @ symbols and ^ signs. It looked like a nightmare but it was fixable because I pulled one of my previous commits and that undid it. There was a lot of panic when that happened. This project also taught me how different aspects of coding come together. Like how can people use both Java or some other program at the same time. I'd always wondered about that but its all in the terminal.
+So through this project, I learned that git is awesome. I had this one moment where my modified data was all @ symbols and ^ signs. It looked like a nightmare but it was fixable because I pulled one of my previous commits and that undid it. There was a lot of panic when that happened but all turned out well. This project also taught me how different aspects of coding come together. Like how can people use both Java or some other program at the same time. I'd always wondered about that but its all in the terminal.
