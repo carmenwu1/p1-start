@@ -1,6 +1,7 @@
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename, delimiter=",", skiprows = 32)
@@ -28,11 +29,11 @@ range = (len(data))
 stress = data[:,3]
 strain = data[:,7]
 plt.plot(strain,stress,"k-", linestyle='solid',label="Stress vs Strain")
-# plt.title("Stress vs Strain of" + insert thing here)
 plt.xlabel("Strain [Ext %]")
 plt.ylabel('Stress (MPa)')
 plt.grid(True)
 plt.title(filename)
+plt.ticklabel_format(style='sci',axis='y',scilimits=(0,0))
 
 # plotting and displaying the linear fit
 m1,b1=np.polyfit(strain,stress,1)
