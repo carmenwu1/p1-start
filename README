@@ -1,0 +1,15 @@
+This program is dependent on certain software to run:
+- a linux or mac based terminal
+  - this was done by downloading a VPN and MobaXterm and running the school's bascottie computers which are linux based
+
+Software:
+- Cisco Anyconnect
+- MobaXterm (https://mobaxterm.mobatek.net/)
+
+This code can be run in python by running, the code (plot.py), and then the file name. It can be edited for files that have slightly differing data sets.
+eg) $ python plot.py [filename]
+
+When this code is run in the terminal, it will show the Young's modulus of a sample in the terminal and will pop up a graph that has the data plotted in a solid line as well as a linear fit. The units of the graph are in scientific notation.
+
+Commentary:
+So through this project, I learned that git is awesome. I had this one moment where my modified data was all @ symbols and ^ signs. It looked like a nightmare but it was fixable because I pulled one of my previous commits and that undid it. There was a lot of panic when that happened. This project also taught me how different aspects of coding come together. I'd always wondered about that.
